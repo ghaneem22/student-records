@@ -1,0 +1,132 @@
+:root {
+  --bg: #fafafa;
+  --text: #222;
+  --primary: #00796b;
+  --secondary: #b2dfdb;
+  --accent: #ff5722;
+  --border: #e0e0e0;
+  --font: 'Amiri', serif;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --primary: #26a69a;
+  --border: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.controls button,
+header button {
+  margin: 0 0.25rem;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  background: white;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 500px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=text],
+input[type=number],
+input[type=search] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font);
+}
+
+button[type=submit] {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+th {
+  background: var(--secondary);
+}
+
+tbody tr:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.dark tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .controls {
+    margin-top: 0.5rem;
+  }
+  table {
+    font-size: 0.85rem;
+  }
+}
