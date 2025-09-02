@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>سجلي الدراسي – لوحة المعلّم</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0;url=login.html">
-  <link rel="stylesheet" href="styles.css">
-  <!-- خط Amiri من Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  <script>
-    // التحقق من تسجيل الدخول
-    if (!localStorage.getItem('currentUser')) {
-        window.location.href = 'login.html';
-    }
-  </script>
+    <meta charset="UTF-8">
+    <title>سجلي الدراسي</title>
+    <script>
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+        if (user) {
+            window.location.href = 'dashboard.html';
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
 </head>
 <body>
   <header>
