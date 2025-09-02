@@ -1,3 +1,18 @@
+// التحقق من تسجيل الدخول
+function checkAuth() {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (!user) {
+        window.location.href = 'login.html';
+        return false;
+    }
+    return true;
+}
+
+// التحقق عند تحميل الصفحة
+if (!checkAuth()) {
+    throw new Error('غير مصرح بالدخول');
+}
+
 const STORAGE_KEY = 'classRecord';
 
 let students = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
