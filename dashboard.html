@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم - سجلي الدراسي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>لوحة التحكم</h1>
+        <div class="user-info">
+            <span id="userDisplay"></span>
+            <button id="logoutBtn">تسجيل خروج</button>
+        </div>
+    </header>
+
+    <nav class="dashboard-nav">
+        <button onclick="location.href='index.html'">السجل الدراسي</button>
+        <button onclick="location.href='attendance.html'">سجل الحضور والغياب</button>
+        <button onclick="showReports()" id="reportsBtn">التقارير</button>
+    </nav>
+
+    <main class="dashboard-main">
+        <section class="stats-container">
+            <div class="stat-card">
+                <h3>إجمالي الطلاب</h3>
+                <p id="totalStudents">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>نسبة الحضور</h3>
+                <p id="attendanceRate">0%</p>
+            </div>
+            <div class="stat-card">
+                <h3>متوسط الدرجات</h3>
+                <p id="averageGrade">0</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

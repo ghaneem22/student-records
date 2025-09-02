@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سجل الحضور والغياب - سجلي الدراسي</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>سجل الحضور والغياب</h1>
+        <nav>
+            <button onclick="location.href='dashboard.html'">العودة للوحة التحكم</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="attendance-controls">
+            <input type="date" id="attendanceDate">
+            <select id="classSelect">
+                <option value="">اختر الصف...</option>
+            </select>
+            <button onclick="loadStudents()">عرض الطلاب</button>
+        </section>
+
+        <section class="attendance-list">
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الحالة</th>
+                        <th>ملاحظات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button onclick="saveAttendance()" class="save-btn">حفظ</button>
+        </section>
+    </main>
+
+    <script src="attendance.js"></script>
+</body>
+</html>

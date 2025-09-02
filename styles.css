@@ -118,6 +118,95 @@ body.dark tbody tr:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* أنماط صفحة تسجيل الدخول */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* أنماط لوحة التحكم */
+.dashboard-nav {
+  background: var(--secondary);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-nav button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary);
+}
+
+.stat-card p {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--accent);
+}
+
+/* أنماط صفحة الحضور والغياب */
+.attendance-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.attendance-controls input,
+.attendance-controls select {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.save-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -128,5 +217,13 @@ body.dark tbody tr:hover {
   }
   table {
     font-size: 0.85rem;
+  }
+  
+  .attendance-controls {
+    flex-direction: column;
+  }
+  
+  .dashboard-nav {
+    flex-direction: column;
   }
 }
